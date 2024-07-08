@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/enemigoo.png" type="Texture" id=2]
+[ext_resource path="res://Enemy/EnemyRed.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 49, 84 )
+
+[node name="EnemyRed" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( -4.24265, -4.94974 )
+rotation = 3.14159
+scale = Vector2( 0.215556, 0.229844 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource( 1 )
